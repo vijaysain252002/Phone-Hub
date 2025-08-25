@@ -1,0 +1,608 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhoneHub - Home Page</title>
+    <link rel="icon" type="image/x-icon" href="./image/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
+    <link rel="stylesheet" href="./Css/style.css">
+    <link rel="stylesheet" href="./Css/Shoap.css">
+    <link rel="stylesheet" href="./Css/category.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-main">
+                <a href="#" class="logo">Phone <span> Hub</span></a>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for phones, accessories...">
+                    <button><i class="ri-search-line"></i></button>
+                </div>
+                <div class="header-icons">
+                    <button class="icon-btn">
+                        <a href=""><i class="ri-user-add-line"></i></a>
+                    </button>
+                    <button class="icon-btn">
+                        <i class="ri-heart-line"></i>
+                        <span class="cart-count">3</span>
+                    </button>
+                    <button class="icon-btn" id="cart-btn">
+                        <i class="ri-shopping-bag-line"></i>
+                        <span class="cart-count">5</span>
+                    </button>
+                    <button class="mobile-menu-btn" id="menu-toggle">
+                        <i class="ri-menu-line"></i>
+                    </button>
+                    <button onclick="toggleMode()" class="icon-btn">
+                        <i class="ri-moon-line"></i>
+                    </button>
+                </div>
+                <h2 id="timer"></h2>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./shop.html">Shop</a></li>
+                    <li><a href="./category.html">Categories</a></li>
+                    <li><a href="#">Brands</a></li>
+                    <li><a href="#">Deals</a></li>
+                    <li><a href="#">Accessories</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="overlay" id="overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <a href="#" class="logo">Phone <span> Hub</span></a>
+            <button class="close-menu" id="close-menu">
+                <i class="ri-close-circle-line"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./shop.html">Shop</a></li>
+            <li><a href="./category.html">Categories</a></li>
+            <li><a href="#">Brands</a></li>
+            <li><a href="#">Deals</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="mobile-header-icons">
+            <button class="icon-btn">
+                <i class="ri-user-line"></i>
+            </button>
+            <button class="icon-btn">
+                <i class="ri-heart-line"></i>
+                <span class="cart-count">3</span>
+            </button>
+            <button class="icon-btn" id="mobile-cart-btn">
+                <i class="ri-shopping-bag-line"></i>
+                <span class="cart-count">5</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Premium Smartphones at Unbeatable Prices</h1>
+            <p>Discover the latest smartphones from top brands with exclusive discounts and free shipping on all orders.
+            </p>
+            <div>
+                <a href="#" class="btn">Shop Now</a>
+                <a href="#" class="btn btn-outline">View Deals</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="container">
+        <h2 class="section-title">Featured Phones</h2>
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./image/phone 14.webp" alt="iPhone 14">
+                    <span class="sale-badge">SALE</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Smartphone</div>
+                    <h3 class="product-name">Apple iPhone 14 Pro</h3>
+                    <div class="product-price">
+                        <span class="current-price">$899</span>
+                        <span class="original-price">$999</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="wishlist"><i class="ri-heart-line"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./image/samsung-galaxy-s24-ultra-1-tb-titanium-gray-12-gb-ram-.jpg" alt="Galaxy S23">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Smartphone</div>
+                    <h3 class="product-name">Samsung Galaxy S23 Ultra</h3>
+                    <div class="product-price">
+                        <span class="current-price">$1,199</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="wishlist"><i class="ri-heart-line"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./image/images.jpeg" alt="Pixel 7">
+                    <span class="sale-badge">NEW</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Smartphone</div>
+                    <h3 class="product-name">Google Pixel 7 Pro</h3>
+                    <div class="product-price">
+                        <span class="current-price">$799</span>
+                        <span class="original-price">$899</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="wishlist"><i class="ri-heart-line"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./image/oneplus.jpg" alt="OnePlus 11">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Smartphone</div>
+                    <h3 class="product-name">OnePlus 11 5G</h3>
+                    <div class="product-price">
+                        <span class="current-price">$699</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="wishlist"><i class="ri-heart-line"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./image/infilix.webp" alt="iPhone 14">
+                    <span class="sale-badge">SALE</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Smartphone</div>
+                    <h3 class="product-name">Infinix Note 50s 5G+</h3>
+                    <div class="product-price">
+                        <span class="current-price">$699</span>
+                        <span class="original-price">$799</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="wishlist"><i class="ri-heart-line"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./image/poco.webp" alt="Galaxy S23">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Smartphone</div>
+                    <h3 class="product-name">POCO C75 5G</h3>
+                    <div class="product-price">
+                        <span class="current-price">$1,199</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="wishlist"><i class="ri-heart-line"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./image/itel.webp" alt="Pixel 7">
+                    <span class="sale-badge">NEW</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Smartphone</div>
+                    <h3 class="product-name">Itel 5G</h3>
+                    <div class="product-price">
+                        <span class="current-price">$399</span>
+                        <span class="original-price">$899</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="wishlist"><i class="ri-heart-line"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="./image/motorola.webp" alt="OnePlus 11">
+                </div>
+                <div class="product-info">
+                    <div class="product-category">Smartphone</div>
+                    <h3 class="product-name">MotoRola</h3>
+                    <div class="product-price">
+                        <span class="current-price">$499</span>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart">Add to Cart</button>
+                        <button class="wishlist"><i class="ri-heart-line"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="ri-smartphone-line"></i>
+                    </div>
+                    <div class="category-name">Smartphones</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="ri-tablet-line"></i>
+                    </div>
+                    <div class="category-name">Tablets</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="ri-customer-service-line"></i>
+                    </div>
+                    <div class="category-name">Accessories</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="ri-macbook-line"></i>
+                    </div>
+                    <div class="category-name">Laptops</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="ri-watch-line"></i>
+                    </div>
+                    <div class="category-name">Wearables</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-icon">
+                        <i class="ri-video-on-line"></i>
+                    </div>
+                    <div class="category-name">Cameras</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="container features">
+        <h2 class="section-title">Why Choose PhoneHub</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="ri-truck-fill"></i>
+                </div>
+                <h3 class="feature-title">Free Shipping</h3>
+                <p>Free delivery on all orders over $50. Fast and reliable shipping to your doorstep.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="ri-arrow-go-back-line"></i>
+                </div>
+                <h3 class="feature-title">30-Day Returns</h3>
+                <p>Not satisfied? Return your purchase within 30 days for a full refund.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="ri-file-shield-line"></i>
+                </div>
+                <h3 class="feature-title">Secure Payment</h3>
+                <p>Your payment information is secure with our industry-leading encryption.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="ri-customer-service-line"></i>
+                </div>
+                <h3 class="feature-title">24/7 Support</h3>
+                <p>Our customer service team is available around the clock to assist you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with our latest products, exclusive deals, and tech news.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Checkout Modal -->
+    <div class="checkout-modal" id="checkout-modal">
+        <div class="checkout-container">
+            <div class="checkout-header">
+                <h2>Checkout</h2>
+                <button class="close-checkout" id="close-checkout">
+                    <i class="ri-close-circle-fill"></i>
+                </button>
+            </div>
+            <div class="checkout-content">
+                <div class="checkout-steps">
+                    <div class="step active">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Shipping</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Payment</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Confirm</div>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h3>Shipping Information</h3>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="first-name">First Name</label>
+                                <input type="text" id="first-name" class="form-control" placeholder="John">
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" id="last-name" class="form-control" placeholder="Doe">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" class="form-control" placeholder="123 Main Street">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" class="form-control" placeholder="San Francisco">
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="zip">ZIP Code</label>
+                                <input type="number" max="6" min="1" id="zip" class="form-control" placeholder="94102">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="john.doe@example.com">
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="number" id="phone" class="form-control" placeholder="(123) 456-7890">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h3>Order Summary</h3>
+                    <div class="cart-items">
+                        <div class="cart-item">
+                            <div class="cart-item-image">
+                                <img src="https://placehold.co/60x60/2563eb/white?text=iPhone" alt="iPhone 14">
+                            </div>
+                            <div class="cart-item-details">
+                                <div class="cart-item-name">Apple iPhone 14 Pro</div>
+                                <div class="cart-item-price">$899.00</div>
+                                <div class="cart-item-quantity">
+                                    <button class="quantity-btn">-</button>
+                                    <span>1</span>
+                                    <button class="quantity-btn">+</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item">
+                            <div class="cart-item-image">
+                                <img src="https://placehold.co/60x60/10b981/white?text=Case" alt="Phone Case">
+                            </div>
+                            <div class="cart-item-details">
+                                <div class="cart-item-name">Silicone Phone Case</div>
+                                <div class="cart-item-price">$29.99</div>
+                                <div class="cart-item-quantity">
+                                    <button class="quantity-btn">-</button>
+                                    <span>2</span>
+                                    <button class="quantity-btn">+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-summary">
+                        <div class="summary-item">
+                            <span>Subtotal</span>
+                            <span>$958.98</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Shipping</span>
+                            <span>Free</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Tax</span>
+                            <span>$76.72</span>
+                        </div>
+                        <div class="summary-total">
+                            <span>Total</span>
+                            <span>$1,035.70</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checkout-section">
+                    <h3>Payment Method</h3>
+                    <div class="payment-methods">
+                        <div class="payment-method active">
+                            <i class="ri-visa-line"></i> Credit Card
+                        </div>
+                        <div class="payment-method">
+                            <i class="ri-smartphone-fill"></i> Phone pe
+                        </div>
+                        <div class="payment-method">
+                            <i class="ri-apple-fill"></i> Apple Pay
+                        </div>
+                        <div class="payment-method">
+                            <i class="ri-shake-hands-line"></i> Cash on Delivery
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" class="form-control"
+                                    placeholder="1234 5678 9012 3456">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="expiry">Expiry Date</label>
+                                <input type="text" id="expiry" class="form-control" placeholder="MM/YY">
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <div class="form-group">
+                                <label for="cvv">CVV</label>
+                                <input type="text" id="cvv" class="form-control" placeholder="123">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 18px;">
+                    Place Order
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>PhoneHub</h3>
+                    <p>Your one-stop destination for the latest smartphones and tech accessories at competitive prices.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                        <a href="#"><i class="ri-twitter-line"></i></a>
+                        <a href="#"><i class="ri-instagram-fill"></i></a>
+                        <a href="#"><i class="ri-youtube-fill"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Deals & Promotions</a></li>
+                        <li><a href="#">Clearance</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Information</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li><i class="ri-map-pin-line"></i> 123 Tech Street, San Francisco</li>
+                        <li><i class="ri-phone-line"></i> (123) 456-7890</li>
+                        <li><i class="ri-mail-line"></i> info@phonehub.com</li>
+                        <li><i class="ri-time-fill"></i> Mon-Fri: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 PhoneHub. All rights reserved. Designed with ❤️ for tech enthusiasts.
+            </div>
+        </div>
+    </footer>
+
+    <script src="./Js/app.js"></script>
+    <script src="./Js/shoap.js"></script>
+    <script src="./Js/category.js"></script>
+    <script>
+        let time =  20 * 60;
+
+        const timerEl = document.getElementById("timer");
+
+        const countdown = setInterval(() => {
+            let minutes = Math.floor(time / 60);
+            let seconds = time % 60;
+            timerEl.textContent =
+                `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+            time--;
+
+            if (time < 0) {
+                clearInterval(countdown);
+                timerEl.textContent = "Time Up!";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>
